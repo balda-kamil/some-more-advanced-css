@@ -20,6 +20,13 @@
       .notificationBar li {
         margin-top: 60px;
       }
+      .notificationBar li div {
+        margin-left: 50px;
+        margin-top: -35px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        background-color: #fff;
+      }
       .notificationBar li i {
         width: 30px;
         height: 30px;
@@ -28,6 +35,26 @@
         line-height: 30px;
         border: 1px solid #ddd;
         border-radius: 50%;
+        background-color: #fff;
+      }
+      .notificationBar li i::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        position: absolute;
+        background-color: #ddd;
+        margin-top: 15px;
+        z-index: -1;
+      }
+      .notificationBar::after{
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: #ddd;
+        position: absolute;
+        top: 4px;
+        z-index: -1;
+        left: 15px;
       }
     
     </style>
@@ -37,12 +64,15 @@
         <ul class="notificationBar">
             <li>
                 <i class="ion-checkmark"></i>
+                <div>third notification</div>
             </li>
             <li>
                 <i class="ion-paper-airplane"></i>
+                <div>second notification</div>
             </li>
             <li>
                 <i class="ion-plus"></i>
+                <div>first notification</div>
             </li>    
         </ul>
     </div>   
